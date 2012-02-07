@@ -1,16 +1,24 @@
+@fonts: "Segoe UI", "Segoe WP", "Helvetica Neue", Roboto, sans-serif;
+
 body {
-	font-family: "Segoe UI", "Segoe WP", "Helvetica Neue", Roboto, sans-serif;
+	font-family: @fonts;
 }
 
-h1,h2,h3,h4,h5,h6 
+h1, h2, h3, h4, h5, h6 
 {
-	font-weight: 100;
 	color: @accent;
+	font-weight: 100;
 	line-height: 1em;
 	text-transform: lowercase;
 }
-h1 { font-size: 4em;}
-h2 { font-size: 3em; }
+
+h1, h2 {
+	font-family: "Segoe UI Light", @fonts;
+}
+
+h1 { font-size: 3.8em; }
+h2 { font-size: 2em; }
+
 h4 {
 	font-weight: normal;
 	text-transform: uppercase;
