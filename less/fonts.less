@@ -20,15 +20,7 @@
     font-style: normal;
 }
 
-@fonts: "Segoe UI", "Segoe WP", "Helvetica Neue", 'RobotoRegular', sans-serif;
-@headingfonts: "Segoe UI Light", "Helvetica Neue", 'RobotoLight', "Segoe UI", "Segoe WP", sans-serif;
-
-body {
-	font-family: @fonts;
-}
-
-h1, h2, h3, h4, h5, h6 
-{
+#headingstyles {
 	font-family: @headingfonts;
 	font-weight: 100;
 	text-transform: lowercase;
@@ -36,9 +28,20 @@ h1, h2, h3, h4, h5, h6
 	margin-bottom:0px;
 }
 
-h1 { font-size: 3.8em; }
-h2 { font-size: 2em; }
 
+body {
+	font-family: @fonts;
+	font-size: @baseFontSize;
+}
+
+h1, h2, h3, h4, h5, h6 
+{
+	#headingstyles;
+}
+
+h1 { font-size: @baseFontSize * 4; }
+h2 { font-size: @baseFontSize * 3; }
+h3 { font-size: @baseFontSize * 2; }
 h4, h5, h6 {
 	font-weight: normal;
 	text-transform: uppercase;
