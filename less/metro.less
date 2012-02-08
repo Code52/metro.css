@@ -1,2 +1,15 @@
 @import "colours.less";
 @import "fonts.less";
+
+#bundle {
+	.pivot-header {
+		color: @inactive;
+		font-size: 20px;
+		text-decoration: none;
+		text-transform: lowercase;
+
+		&.active {
+			color: @foreground;
+		}
+	}
+}
