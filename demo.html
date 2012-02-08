@@ -10,8 +10,8 @@
 		<script type="text/javascript" src="js/jquery.metro.js"></script>
 	</head>
 	<body>
-		<h1>LARGE heading text</h1>
-		<h2>sub heading text</h2>
+		<h1 class="accent">LARGE heading text</h1>
+		<h2 class="lime">sub heading text</h2>
 		<h3>sub-sub heading text</h3>
 		<h4>is this even a heading? woaw</h4>
 		
@@ -35,6 +35,28 @@
 				</p>
 			</div>
 		</div>
+		
+		If you want to use the accent colour, set <code>class="accent"</code>
+		
+		<pre>
+var defaults = {
+		animationDuration: 350,
+		headerOpacity: 0.25,
+		fixedHeaders: false,
+		headerSelector: function (item) { return item.children("h3").first(); },
+		itemSelector: function (item) { return item.children(".pivot-item"); },
+		headerItemTemplate: function () { return $("&lt;span class='header' />"); },
+		pivotItemTemplate: function () { return $("&lt;div class='pivotItem' />"); },
+		itemsTemplate: function () { return $("&lt;div class='items' />"); },
+		headersTemplate: function () { return $("&lt;div class='headers' />"); },
+		controlInitialized: undefined,
+		selectedItemChanged: undefined
+	};
+
+$(function () {
+	$("div.metro-pivot").metroPivot(defaults);
+});
+		</pre>
 		<script>
 		var defaults = {
 					animationDuration: 350,
