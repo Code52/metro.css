@@ -2,27 +2,56 @@
 @import "colours.less";
 @import "fonts.less";
 
-#bundle {
-	.pivot-header {
-		color: @inactive;
-		font-size: 20px;
-		text-decoration: none;
-		text-transform: lowercase;
-
-		&.active {
-			color: @foreground;
-		}
-	}
+metro-pivot .headers {
+	clear: both;
+	display: block;
+	white-space: nowrap;
 }
 
+.metro-pivot .pivot-item h3,
+.metro-pivot .headers .header {
+	#headingstyles;
+	cursor: pointer;
+	display: inline-block;
+	font-size: @h2fontSize;
+	margin-right: 24px;
+	padding: 0;
+	vertical-align: top;
+}
+
+
 .metro-pivot .headers { white-space: nowrap; display: block; clear: both; }
-.metro-pivot .pivot-item h3, .metro-pivot .headers .header { #headingstyles; font-size: @h2fontsize; display: inline-block; vertical-align: top; padding: 0; cursor: pointer; margin-right:24px; }
+.metro-pivot .pivot-item h3, .metro-pivot .headers .header { #headingstyles; font-size: @h2fontSize; display: inline-block; vertical-align: top; padding: 0; cursor: pointer; margin-right:24px; }
 .metro-pivot .headers .header.current { }
 .metro-pivot .items { position: relative; }
 .metro-pivot .items .pivotItem { display: block; white-space: normal; text-align: justify; width: 100%; }
 
 ul.metro-list, ol.metro-list { padding: 0; }
-ul.metro-list li, ol.metro-list li { display: block; margin: 10px 0; height: 20px; padding: 5px; overflow: hidden; border-left: solid 30px; list-style: none; }
+
+ul.metro-list li, ol.metro-list li 
+{
+	display: block;
+    list-style-type: none;
+	border-left: solid 30px @accent;
+	height: 20px;
+	list-style-position: inside;
+	margin: 10px 0;
+	padding:5px;
+
+}
+ul.metro-list { 
+	overflow: hidden; 
+}
+ol.metro-list { 
+	text-indent: -25px;
+    counter-reset: item;
+}
+ol.metro-list li:before { 
+	color:white;
+	margin-right:25px;
+    content: counter(item) "  "; 
+    counter-increment: item;
+}
 
 pre { 
 	padding: 15px;
@@ -30,4 +59,11 @@ pre {
 	background: @faded;
 }
 
-code { padding-left:5px; padding-right: 5px; border: 1px solid @inactive; background: @faded; }
+code {
+	background: @faded;
+	border: 1px solid @inactive;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+.clear { clear:both; }
+
