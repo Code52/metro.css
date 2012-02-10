@@ -1,4 +1,27 @@
 @import "metro.less";
+nav {
+	ul {
+		list-style-type: none;
+		padding-left: 0;
+
+		li {
+			display: inline;
+			margin-right: 20px;
+		}
+		
+		a { 
+			color: @inactive;
+			font-size: @baseFontSize * 1.6;
+			text-decoration: none;
+			text-transform: lowercase;
+
+			&.active 
+			{
+				color: @foreground;
+			}
+		}
+	}
+}
 
 footer {
 	font-size: 90%;
@@ -30,7 +53,6 @@ h1, h2, h3, h4, h5, h6 {
 
 article { .clear }
 .date { text-transform: uppercase; }
-ul.metro-list li, ol.metro-list li { border-left: solid 30px @blue; }
 
 section.title { float: left; font-size: @baseFontSize * 4; } 
 
