@@ -21,28 +21,27 @@
 }
 
 #headingstyles {
-    font-family: @headingfonts;
-    font-weight: 100;
-    text-transform: lowercase;
-    margin-top:5px;
-    margin-bottom:0px;
+	font-family: @headingfonts;
+	font-weight: 100;
+    margin-top: 5px;
+    margin-bottom: 0px;
+	text-transform: lowercase;
 }
 
-
 body {
-    font-family: @fonts;
-    font-size: @baseFontSize;
+	font-family: @fonts;
+	font-size: @baseFontSize;
 }
 
 h1, h2, h3, h4, h5, h6 
 {
-    #headingstyles;
+	#headingstyles;
 }
 
-h1 { font-size: @baseFontSize * 4; }
-h2 { font-size: @baseFontSize * 3; }
-h3 { font-size: @baseFontSize * 2; }
+h1 { font-size: @h1fontSize; }
+h2 { font-size: @h2fontSize; }
+h3 { font-size: @h3fontSize; }
 h4, h5, h6 {
-    font-weight: normal;
-    text-transform: uppercase;
+	font-weight: normal;
+	text-transform: uppercase;
 }
