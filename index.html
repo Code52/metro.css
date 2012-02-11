@@ -15,6 +15,20 @@
 				background-color: #1BA1E2;
 				height: 1px;
 			}
+
+			.colordemo { width: 20px; height: 20px; }
+			.colordemo.lime { background : #8CBF26; }
+			.colordemo.blue { background : #1BA1E2; }
+			.colordemo.brown { background : #A05000; }
+			.colordemo.green { background : #339933; }
+			.colordemo.magenta { background : #FF0097; }
+			.colordemo.orange { background : #F09609; }
+			.colordemo.pink { background : #E671B8; }
+			.colordemo.purple { background : #A200FF; }
+			.colordemo.red { background : #E51400; }
+			.colordemo.teal { background : #00ABA9; }
+			.row { margin-bottom:10px;}
+
 		</style>
 	</head>
 	<body>
@@ -32,6 +46,7 @@
 
 		<ul class="metro-list">
 			<li><a href="#type">Typography</a></li>
+			<li><a href="#colours">Colours</a></li>
 			<li><a href="#controls">Controls</a></li>
 			<li><a href="#demos">Demos</a></li>
 		</ul>
@@ -58,6 +73,47 @@
 		<p>As it is difficult to compare against fonts you can't install/embed, here is an image demonstrating the different fonts</p>
 		<img src="images/fonts.png" />
 		
+		<hr />
+		<a name="colours"></a> 
+		<h2 class="accent">colours</h2>
+
+		<p>The following colours are available for foreground text colour by using <code>class="accentname"</code>, that is <code>class="lime"</code></p>
+
+		  <div class="span12">
+		    <div class="row">
+		      <div class="span1 colordemo lime"></div>
+		      <div class="span5">Lime</div>
+		      <div class="span1 colordemo blue"></div>
+		      <div class="span5">Blue (default)</div>
+		    </div>
+		    <div class="row">
+		      <div class="span1 colordemo brown"></div>
+		      <div class="span5">Brown</div>
+		      <div class="span1 colordemo green"></div>
+		      <div class="span5">Green</div>
+		    </div>
+		    <div class="row">
+		      <div class="span1 colordemo magenta"></div>
+		      <div class="span5">Magenta</div>
+		      <div class="span1 colordemo orange"></div>
+		      <div class="span5">Orange</div>
+		    </div>
+		    <div class="row">
+		      <div class="span1 colordemo pink"></div>
+		      <div class="span5">Pink</div>
+		      <div class="span1 colordemo purple"></div>
+		      <div class="span5">Purple</div>
+		    </div>
+
+		    <div class="row">
+		      <div class="span1 colordemo teal"></div>
+		      <div class="span5">Teal</div>
+		      <div class="span1 colordemo red"></div>
+		      <div class="span5">Red</div>
+		    </div>
+		  </div>
+		</div>
+
 		<hr />
 		<a name="controls"></a> 
 		<h2 class="accent">Controls</h2>
@@ -132,10 +188,10 @@ $(function () {
 		<a name="demos"></a> 
 		<h2 class="accent">demos</h2>
 		<ul class="metro-list">
-			<li class="accent"><a href="/demos/fonts/">A font for all occasions</a></li>
-			<li class="accent"><a href="/demos/fonts/">jqMetro - a pivot control</a></li>
-			<li class="accent"><a href="/demos/blog/">Applying Metro to a blog</a></li>
-			<li class="accent"><a href="/demos/slides/">Adding metro to impress.js (WIP)</a></li>
+			<li class="accent"><a href="demos/fonts/">A font for all occasions</a></li>
+			<li class="accent"><a href="demos/fonts/">jqMetro - a pivot control</a></li>
+			<li class="accent"><a href="demos/blog/">Applying Metro to a blog</a></li>
+			<li class="accent"><a href="demos/slides/">Adding metro to impress.js (WIP)</a></li>
 		</ul>
 		
 		<script>
