@@ -1,0 +1,109 @@
+<!-- a template for people to start styling up a blog-style application using metro principles.
+     note the use of semantic markup instead of classes everywhere
+
+     things to ponder:
+      - perhaps a stylesheet that derives from metro.css for elements such as these
+      - how would you specify image alignments using CSS?
+      - asides represent pull-out text - how should they be styled?
+      -->
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet/less" type="text/css" href="/less/metroblog.less" />
+		<style>
+			body { width: 800px; margin: 0 auto; }
+		</style>
+		<script src="/scripts/less-1.2.1.min.js" type="text/javascript"></script>
+		<title>This is a sample blog</title>
+	</head>
+	<body>
+		<section class="title">
+			<header>
+				My sample blog
+			</header>
+		</section>
+
+		<nav>
+			<ul>
+				<li><a href="#" class="active">Blog</a></li>
+				<li><a href="#">Contact</a></li>
+				<li><a href="#">About</a></li>
+			</ul>
+		</nav>
+
+		<article>
+			<header>
+				<h2>Some header post</h2>
+				<span class="date">February 10th</span>
+			</header>
+
+			<p>You think water moves fast? You should see ice. It moves like it has a mind. Like it knows it killed the world once and got a taste for murder. After the avalanche, it took us a week to climb out. Now, I don't know exactly when we turned on each other, but I know that seven of us survived the slide... and only five made it out. Now we took an oath, that I'm breaking now. We said we'd say it was the snow that killed the other two, but it wasn't. Nature is lethal but it doesn't hold a candle to man.</p>
+
+			<img class="right" src="http://placekitten.com/g/200/300" />
+
+			<p>Look, just because I don't be givin' no man a foot massage don't make it right for Marsellus to throw Antwone into a glass motherfuckin' house, fuckin' up the way the nigger talks. Motherfucker do that @#$% to me, he better paralyze my ass, 'cause I'll kill the motherfucker, know what I'm sayin'?</p>
+
+			<p><h3>Sub Heading #1</h3></p>
+
+			<p>Your bones don't break, mine do. That's clear. Your cells react to bacteria and viruses differently than mine. You don't get sick, I do. That's also clear. But for some reason, you and I react the exact same way to water. We swallow it too fast, we choke. We get some in our lungs, we drown. However unreal it may seem, we are connected, you and I. We're on the same curve, just on opposite ends.</p>
+
+			<img class="left" src="http://placekitten.com/g/300/300" />
+
+			<p>Now that there is the Tec-9, a crappy spray gun from South Miami. This gun is advertised as the most popular gun in American crime. Do you believe that @#$%? It actually says that in the little book that comes with it: the most popular gun in American crime.</p>
+
+			<ul  class="metro-list">
+				<li>We should also style lists.</li>
+				<li>This one, for example, is unordered.</li>
+				<li>And that is it!</li>
+			</ul>
+
+			<aside> Like they're actually proud of that &amp;@#$%. </aside>
+
+			<p><h3>Sub Heading #2</h3></p>
+
+			<p>Normally, both your asses would be dead as @#$%ing fried chicken, but you happen to pull this &amp;@#$% while I'm in a transitional period so I don't wanna kill you, I wanna help you. But I can't give you this case, it don't belong to me. Besides, I've already been through too much &amp;@#$% this morning over this case to hand it over to your dumb ass.</p>
+
+			<img class="right" src="http://placekitten.com/g/400/300" />
+
+			<p>Do you see any Teletubbies in here? Do you see a slender plastic tag clipped to my shirt with my name printed on it? Do you see a little Asian child with a blank expression on his face sitting outside on a mechanical helicopter that shakes when you put quarters in it? No? Well, that's what you see at a toy store. And you must think you're in a toy store, because you're here shopping for an infant named Jeb.</p>
+
+		</article>
+
+		<article>
+			<header>
+				<h2>A follow up post</h2>
+				<span class="date">February 9th</span>
+			</header>
+
+			<p>Look, just because I don't be givin' no man a foot massage don't make it right for Marsellus to throw Antwone into a glass mother@#$%in' house, @#$%in' up the way the nigger talks. Mother@#$%er do that &amp;@#$% to me, he better paralyze my ass, 'cause I'll kill the mother@#$%er, know what I'm sayin'? </p>
+
+			<img class="right" src="http://placekitten.com/g/300/300" />
+
+			<p>Now that we know who you are, I know who I am. I'm not a mistake! It all makes sense! In a comic, you know how you can tell who the arch-villain's going to be? He's the exact opposite of the hero. And most times they're friends, like you and me! I should've known way back when... You know why, David? Because of the kids. They called me Mr Glass. </p>
+
+			<aside> Like they're actually proud of that &amp;@#$%. </aside>
+
+			<ol class="metro-list">
+				<li>This, on the other hand, is an ordered list.</li>
+				<li>It has a first, ...</li>
+				<li>... a second, and ...</li>
+				<li>... a last list item.</li>
+			</ol>
+
+			<p>Now that we know who you are, I know who I am. I'm not a mistake! It all makes sense! In a comic, you know how you can tell who the arch-villain's going to be? He's the exact opposite of the hero. And most times they're friends, like you and me! I should've known way back when... You know why, David? Because of the kids. They called me Mr Glass. </p>
+
+			<p>Now that there is the Tec-9, a crappy spray gun from South Miami. This gun is advertised as the most popular gun in American crime. Do you believe that &amp;@#$%? It actually says that in the little book that comes with it: the most popular gun in American crime. Like they're actually proud of that &amp;@#$%.  </p>
+		</article>
+
+		<!-- please do not remove this line -->
+
+		<section>
+			Built using an awesome <a href="http://slipsum.com">lorem ipsum</a> generator and some <a href="http://placekitten.com/">kitteh pictures</a>
+		</section>
+
+		<footer>
+			Copyright &copy; 2011&ndash;2012
+		</footer>
+	</body>
+</html>
