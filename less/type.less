@@ -45,3 +45,33 @@ h4, h5, h6 {
 	font-weight: normal;
 	text-transform: uppercase;
 }
+
+
+/*  Lists   */
+
+ul.metro-list, ol.metro-list { padding: 0; }
+
+ul.metro-list li, ol.metro-list li 
+{
+    display: block;
+    list-style-type: none;
+    border-left: solid 30px @accent;
+    height: 20px;
+    list-style-position: inside;
+    margin: 10px 0;
+    padding:5px;
+
+}
+ul.metro-list { 
+    overflow: hidden; 
+}
+ol.metro-list { 
+    text-indent: -25px;
+    counter-reset: item;
+}
+ol.metro-list li:before { 
+    color:white;
+    margin-right:25px;
+    content: counter(item) "  "; 
+    counter-increment: item;
+}
