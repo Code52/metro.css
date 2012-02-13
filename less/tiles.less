@@ -1,0 +1,56 @@
+@tilebasewidth : 130;
+@tilepadding: 5;
+@tilemargin: 10;
+@tilesize: (@tilepadding*2) + @tilebasewidth + @tilemargin;
+
+.tile {
+	-webkit-perspective: 0;
+	-webkit-transform-style: preserve-3d;
+	-webkit-transition: -webkit-transform 0.2s;
+	float: left;
+	margin-right: @tilemargin + 0px;
+	margin-bottom: @tilemargin + 0px;
+	text-align:center;
+	padding: @tilepadding + 0px;
+	opacity:0.75;
+
+	h1, h2, h3, h4, h5, h6 { 
+		color: @white;
+		-webkit-user-select: none;
+	}
+
+	h2 { font-size: 1.75em; margin-top: 0px - @tilemargin; margin-left:0px; }
+
+	a:hover { text-decoration: none; }
+}
+
+
+.tile img { border :0;}
+.tile:hover { opacity:1;}
+.tiles { .clear; }
+.tilerow  { 
+	float:left; 	
+	-webkit-perspective: 0;
+	-webkit-transform-style: preserve-3d;
+	-webkit-user-select: none; 
+} 
+.one {
+	width: @tilebasewidth + 0px;
+	height: @tilebasewidth + 0px;
+}
+.two-h {
+	width: (@tilebasewidth + @tilemargin) *2 + 0px;
+	height: @tilebasewidth + 0px;
+}
+.two-v {
+	width: @tilebasewidth + 0px;
+	height: (@tilebasewidth + @tilemargin)*2 + 0px;
+}
+
+.firstcol, .secondcol, .thirdcol, .fourthcol, .fifthcol { position: absolute;}
+.firstcol { }
+.secondcol { margin-left: @tilesize*1px; }
+.thirdcol { margin-left: @tilesize*2px; }
+.fourthcol { margin-left: @tilesize*3px; }
+.fifthcol { margin-left: @tilesize*4px; }
+
