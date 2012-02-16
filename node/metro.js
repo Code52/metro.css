@@ -15,9 +15,10 @@ var version = '0.0.1';
 
 var usage = ''
   + '\n'
-  + '  Usage: node metro [options|path]\n'
+  + '  Usage: node metro [options] [path]\n'
   + '\n'
   + '  Options:\n'
+  + '    -i, --iis                iisnode compatibility\n'
   + '    -v, --version            output framework version\n'
   + '    -h, --help               output help information\n'
   ;
@@ -25,7 +26,8 @@ var usage = ''
 // Parse arguments
 
 var args = process.argv.slice(2)
-  , path = '.';
+  , path = '.'
+  , forIis = false;
 
 while (args.length) {
   var arg = args.shift();
@@ -37,6 +39,10 @@ while (args.length) {
     case '-v':
     case '--version':
       abort(version);
+      break;
+    case '-i':
+    case '--iis':
+      forIis= true;
       break;
     default:
         path = arg;
@@ -81,7 +87,7 @@ var jadeLayout = [
   , '      body { width: 800px; margin: 0 auto; }'
   , '    script(type=\'text/javascript\', src=\'http://code.jquery.com/jquery-1.5.1.min.js\')'
   , '    script(type=\'text/javascript\', src=\'/js/jquery.metro.js\')'
-  , '  body!= body'
+  , '  body.whitebg.blue!= body'
 ].join(eol);
 
 /**
@@ -168,10 +174,33 @@ var app = [
   , ''
   , 'app.get(\'/\', routes.index);'
   , ''
-  , 'app.listen(3000);'
+  , 'app.listen(' + (forIis ? 'process.env.PORT' : '3000') + ');'
   , 'console.log("Express server listening on port %d in %s mode", app.address().port, app.settings.env);'
   , ''
 ].join(eol);
+
+// IISNode web.config
+if (forIis) {
+	var webConfig = [
+        ''
+      , '<configuration>'
+      , '  <system.webServer>'
+      , '    <handlers>'
+      , '      <add name="iisnode" path="app.js" verb="*" modules="iisnode" />'
+      , '    </handlers>'
+      , '    <iisnode loggingEnabled="false" />'
+      , '    <rewrite>'
+      , '      <rules>'
+      , '        <rule name="myapp">'
+      , '          <match url="/*" />'
+      , '          <action type="Rewrite" url="app.js" />'
+      , '        </rule>'
+      , '      </rules>'
+      , '    </rewrite>'
+      , '  </system.webServer>'
+      , '</configuration>'
+	].join(eol);
+}
 
 // Generate application
 
@@ -240,6 +269,9 @@ function createApplicationAt(path) {
 
     write(path + '/package.json', json);
     write(path + '/app.js', app);
+    if (forIis) {
+    	write(path + '/web.config', webConfig);
+    }
   });
 }
 
