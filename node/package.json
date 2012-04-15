@@ -1,0 +1,16 @@
+{
+	"name": "metro-css",
+	"description": "A website template with \"Metro\" styling.",
+	"version": "0.0.1",
+	"author": "Code 52",
+	"contributors": [
+		{ "name" : "Chris Sainty", "email": "csainty@hotmail.com" }
+	],
+	"dependencies": {
+		"mkdirp": ">= 0.3.0",
+		"ncp": ">= 0.2.4"
+	},
+	"repository": "git://github.com/Code52/metro.css.git",
+	"main": "metro",
+	"engines": { "node": ">= 0.4.1 < 0.7.0" }
+}

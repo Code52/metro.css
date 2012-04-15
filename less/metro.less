@@ -1,28 +1,20 @@
+@import "bootstrap.less";
+
 @import "variables.less";
 @import "colours.less";
-@import "fonts.less";
+@import "type.less";
+@import "tiles.less";
+@import "pivot.less";
 
-#bundle {
-	.pivot-header {
-		color: @inactive;
-		font-size: 20px;
-		text-decoration: none;
-		text-transform: lowercase;
-
-		&.active {
-			color: @foreground;
-		}
-	}
+a {
+  color: @accent;
+  text-decoration: none;
 }
 
-.metro-pivot .headers { white-space: nowrap; display: block; clear: both; }
-.metro-pivot .pivot-item h3, .metro-pivot .headers .header { #headingstyles; font-size: @h2fontsize; display: inline-block; vertical-align: top; padding: 0; cursor: pointer; margin-right:24px; }
-.metro-pivot .headers .header.current { }
-.metro-pivot .items { position: relative; }
-.metro-pivot .items .pivotItem { display: block; white-space: normal; text-align: justify; width: 100%; }
-
-ul.metro-list, ol.metro-list { padding: 0; }
-ul.metro-list li, ol.metro-list li { display: block; margin: 10px 0; height: 20px; padding: 5px; overflow: hidden; border-left: solid 30px; list-style: none; }
+a:hover {
+  color: @accentDark;
+  text-decoration: underline;
+}
 
 pre { 
 	padding: 15px;
@@ -30,4 +22,11 @@ pre {
 	background: @faded;
 }
 
-code { padding-left:5px; padding-right: 5px; border: 1px solid @inactive; background: @faded; }
+code {
+	background: @faded;
+	border: 1px solid @inactive;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+.clear { clear:both; }
