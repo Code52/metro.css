@@ -85,7 +85,7 @@ var jadeLayout = [
   , '    link(rel=\'stylesheet\', href=\'/css/metro.css\')'
   , '    style'
   , '      body { width: 800px; margin: 0 auto; }'
-  , '    script(type=\'text/javascript\', src=\'http://code.jquery.com/jquery-1.5.1.min.js\')'
+  , '    script(type=\'text/javascript\', src=\'//ajax.aspnetcdn.com/ajax/jquery/jquery-1.7.2.min.js\')'
   , '    script(type=\'text/javascript\', src=\'/js/jquery.metro.js\')'
   , '  body.whitebg.blue!= body'
 ].join(eol);
