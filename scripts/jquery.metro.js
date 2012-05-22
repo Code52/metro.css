@@ -118,7 +118,8 @@
             },
             setCurrentItem: function(item, index){
                 var pivot = this;
-                
+                var currentHeight = pivot.items.height();
+				pivot.items.height(currentHeight);
                 // hide current item immediately
                 pivot.items.children(".pivotItem.current").hide().removeClass("current");
 
@@ -128,7 +129,7 @@
                     item.css({ marginLeft: item.outerWidth() }).show().addClass("current");
 
                     // animate it to left
-                    item.animate( { marginLeft: 0 }, pivot.animationDuration, function() { pivot.currentItemChanged(index);});
+                    item.animate( { marginLeft: 0 }, pivot.animationDuration, function() {pivot.items.height('auto'); pivot.currentItemChanged(index);});
 
                 }, 200);                
             },
