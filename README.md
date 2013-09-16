@@ -14,4 +14,6 @@ With node installed on your system, run the following commands
 
 Then point your browser at http://localhost:3000
 
+Live Demo and Documentation : http://code52.org/metro.css/
+
 
