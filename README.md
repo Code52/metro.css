@@ -4,6 +4,7 @@ For those new to Less, it's worth checking out [SimpLESS](http://wearekiss.com/s
 
 #########
 Loading animation added
+Added a gif file in the images folder.
 
 ### Node.js
 Included in the `node` folder is a script for creating a template website using the metro.css theme in Node.js  
