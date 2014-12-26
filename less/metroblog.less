@@ -1,4 +1,9 @@
 @import "metro.less";
+
+body { margin: 0 20px; }
+
+main { clear: both; }
+
 nav {
 	ul {
 		list-style-type: none;
@@ -8,14 +13,14 @@ nav {
 			display: inline;
 			margin-right: 20px;
 		}
-		
-		a { 
+
+		a {
 			color: @inactive;
 			font-size: @baseFontSize * 1.6;
 			text-decoration: none;
 			text-transform: lowercase;
 
-			&.active 
+			&.active
 			{
 				color: @foreground;
 			}
@@ -25,37 +30,84 @@ nav {
 
 footer {
 	font-size: 90%;
+	font-style: italic;
+	color: @inactive;
 }
 
 img {
 	margin-top: 20px;
 	margin-bottom: 20px;
-	box-shadow: 0px 0px 7px #777;  
-}
-img.left {
-	float: left;
-	margin-right: 20px;
+	box-shadow: 0px 0px 7px #777;
 
-}
+	&.left {
+		float: left;
+		margin-right: 20px;
+	}
 
-img.right {
-	float: right;
-	margin-left: 20px;
+	&.right {
+		float: right;
+		margin-left: 20px;
+	}
 }
-
 
 ol.metro-list { margin-left: 10px; }
 
-
 h1, h2, h3, h4, h5, h6 {
- 	color: @blue;
+	color: @blue;
 }
 
 article { .clear }
 .date { text-transform: uppercase; }
 
-section.title { float: left; font-size: @baseFontSize * 4; } 
+header {
+	font-size: @baseFontSize * 2;
+	margin-top: 10px;
+	margin-bottom: 10px;
 
-nav { float: right; margin-left: 140px; margin-top: 20px; margin-bottom: 20px; }
+	span.subtitle {
+		font-size: @baseFontSize;
+		color: @inactive;
+		font-style: italic;
+		display: inline;
+
+		&:before {
+			content: "- ";
+		}
+	}
+}
+
+nav {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
 
 nav  a:hover { color: black; }
+
+@media all and(min-width: 800px) {
+	body { width: 800px; margin: 0 auto; }
+
+	nav {
+		float: right;
+		margin-left: 120px;
+		margin-top: 20px;
+		margin-bottom: 20px;
+	}
+
+	header {
+		float: left;
+		font-size: @baseFontSize * 4;
+		margin-top: 20px;
+		margin-bottom: 20px;
+
+		span.subtitle {
+			font-size: @baseFontSize * 1.5;
+			color: @inactive;
+			font-style: italic;
+			display: block;
+
+			&:before {
+				content: "";
+			}
+		}
+	}
+}
